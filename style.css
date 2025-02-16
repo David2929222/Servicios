@@ -1,0 +1,671 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*font-family: "Bebas Neue", cursive;*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    font-family: 'Poppins' , sans-serif;
+    background-color:#344C11;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.header {
+    background-image: url(images/j6.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+
+} 
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.logo{
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.menu .navbar ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Coloca los elementos en línea */
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: none; /* Elimina el float si usas flexbox */
+    margin: 0 15px; /* Espacio entre los elementos del menú */
+}
+
+.menu .navbar ul li a {
+    font-size: 25px;
+    padding: 10px 20px; /* Ajusta el padding */
+    color: #ffffff;
+    text-decoration: none; /* Quita el subrayado por defecto */
+    display: block;
+    transition: all 0.3s ease; /* Transición suave para todos los efectos */
+    position: relative;
+}
+
+/* Efecto de subrayado animado */
+.menu .navbar ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #AEC670; /* Color del subrayado */
+    transition: width 0.3s ease; /* Animación del subrayado */
+}
+
+/* Cambio de color y subrayado al pasar el cursor */
+.menu .navbar ul li a:hover {
+    color: #AEC670;
+}
+
+.menu .navbar ul li a:hover::after {
+    width: 100%; /* Anima el subrayado de izquierda a derecha */
+}
+
+/* Efecto de sombra y elevación al pasar el cursor */
+.menu .navbar ul li a:hover {
+    transform: translateY(-3px); /* Levanta ligeramente el enlace */
+    text-shadow: 0 4px 6px rgba(174, 198, 112, 0.3); /* Sombra suave */
+}
+#menu {
+    display: none;
+}
+.menu-icono {
+    width: 25px;
+}
+.menu label {
+    cursor: pointer;
+    display: none;
+
+}
+.header-txt h1, .header-txt span, .header-txt p, .header-txt .btn-1 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header-txt h1 {
+    animation-delay: 0.2s;
+}
+
+.header-txt span {
+    animation-delay: 0.4s;
+}
+
+.header-txt p {
+    animation-delay: 0.6s;
+}
+
+.header-txt .btn-1 {
+    animation-delay: 0.8s;
+}
+.header-txt {
+    margin-top: 80px;
+    text-align: center;
+    margin-bottom: 45pxs;
+
+}
+.header-txt h1, span, h3 {
+    font-size: 110px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: "Bebas Neue", cursive;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+.header-txt span {
+    font-size: 50px;
+}
+.header-txt p {
+    color: #FFFFFF;
+    padding: 0 250px;
+    margin: 40px 0px;
+}
+.btn-1 {
+    display: inline-block;
+    padding: 15px 30px; /* Aumenta el padding para un mejor aspecto */
+    background-color: #AEC670; /* Color de fondo */
+    color: #FFFFFF; /* Color del texto */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-family: "Bebas Neue", cursive;
+    margin: 25px 0;
+    border: 0;
+    border-radius: 50px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave para todos los efectos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    position: relative;
+    overflow: hidden; /* Para ocultar el desbordamiento del efecto */
+}
+
+/* Efecto al pasar el cursor */
+.btn-1:hover {
+    background-color: #8FAF50; /* Cambia el color de fondo */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+    transform: translateY(-3px); /* Levanta el botón ligeramente */
+}
+
+/* Efecto de "onda" al hacer clic */
+.btn-1:active {
+    transform: translateY(0); /* Vuelve a la posición original */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reduce la sombra */
+}
+
+/* Efecto de fondo animado */
+.btn-1::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.3); /* Color del efecto */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    opacity: 0;
+}
+
+/* Animación al pasar el cursor */
+.btn-1:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.btn-1:hover {
+    background-color: #778D45;
+} 
+.header-dir {
+    justify-content: space-between;
+    text-align: center;
+    margin: 20px;
+    display: flex;
+}
+
+.dir h3 {
+    font-size: 30px;
+}
+
+.dir p {
+    font-size: 22px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+.welcome-1 {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideInLeft 1s ease forwards;
+}
+
+.welcome-2 {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideInRight 1s ease forwards;
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.welcome {
+    display: flex;
+}
+.welcome-1 {
+    background-image: url(images/j7.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+
+}
+.welcome-2{
+    width: 50%;
+    padding: 150px 250px 150px 100px;
+    background-color: #344C11;
+}
+h2 {
+    font-size: 90px;
+    line-height: 100px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-family: "Bebas Neue", cursive;
+    margin-bottom: 20px;
+
+}
+p {
+    font-size: 16px;
+    color: #ffffff;
+    margin: 25px 0;
+}
+.b1 {
+    color: #AEC670;
+}
+
+.services {
+    padding: 100px 0;
+    text-align: center;
+}
+.services-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+hr {
+    border: 1px solid #AEC670;
+    width: 80px;
+}
+
+.services-txt p {
+    padding: 50px 150px;
+}
+.services-group {
+    display: flex;
+    justify-content: space-between;
+    margin: 45px 0;
+}
+
+.services-1 {
+    background-color: #778D45;
+    padding: 35px 25px;
+    margin: 0 10px;
+    border-radius: 15px;
+}
+.services-1 img {
+    width: 300px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.services-1 h3 {
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.services-1 a, .personal-1 a {
+    display: inline-block;
+    padding: 10px 20px; /* Ajusta el padding para que se vea como un botón */
+    background-color: #8FAF50; /* Fondo transparente */
+    color: #ffffff; /* Color del texto */
+    font-size: 16px;
+    text-decoration: none; /* Quita el subrayado por defecto */
+    border: 2px solid #AEC670; /* Borde del botón */
+    border-radius: 25px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Transición suave para todos los efectos */
+    position: relative;
+    overflow: hidden; /* Para ocultar el desbordamiento del efecto */
+}
+
+/* Efecto al pasar el cursor */
+.services-1 a:hover, .personal-1 a:hover {
+    background-color: #AEC670; /* Cambia el color de fondo */
+    color: #FFFFFF; /* Cambia el color del texto */
+    box-shadow: 0 4px 6px rgba(174, 198, 112, 0.3); /* Sombra suave */
+    transform: translateY(-3px); /* Levanta ligeramente el botón */
+}
+
+/* Efecto de "onda" al hacer clic */
+.services-1 a:active, .personal-1 a:active {
+    transform: translateY(0); /* Vuelve a la posición original */
+    box-shadow: 0 2px 4px rgba(174, 198, 112, 0.3); /* Reduce la sombra */
+}
+
+/* Efecto de fondo animado */
+.services-1 a::after, .personal-1 a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(174, 198, 112, 0.2); /* Color del efecto */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    opacity: 0;
+}
+
+/* Animación al pasar el cursor */
+.services-1 a:hover::after, .personal-1 a:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+
+}
+
+.prices{
+    display: flex;
+}
+.prices-1 {
+    width: 50%;
+    padding: 150px 250px 150px 100px;
+    background-color: #344C11;
+}
+ table{
+    margin: 50px 0;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+tr{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #afafaf;
+    margin-bottom: 20px;
+}
+th {
+    color: #FFFFFF;
+    padding-bottom: 15px;
+}
+td { 
+    color: #AEC670;
+
+}
+
+.prices-2 {
+    background-image: url(images/j8.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 50%;
+}
+
+.personal {
+    padding: 100px 0;
+    text-align: center;
+}
+.personal-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.personal-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+.personal-1 {
+    text-align: center;
+
+}
+.personal-1 img {
+    width: 250px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+
+}
+.personal-1 h3 {
+    font-size: 22px;
+}
+.persona-1 p {
+    padding: 0 50px;
+}
+
+.footer-bg {
+    background-image: url(images/b92.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 100px 0;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.campo-1 {
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+.campo {
+    margin: 5px;
+    padding: 20px 15px;
+    width: 250px;
+    background-color: #778D45;
+    border: 1px solid #1A2902;
+    outline: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 18px;
+}
+::placeholder {
+    font-size: 18px;
+    color: white !important;
+    opacity: 1;
+}
+
+textarea {
+    width: 520px !important;
+}
+.footer-txt {
+    text-align: center;
+    padding: 10px;
+    background-color: #344C11;
+    color: #000000;
+
+}
+@media(max-width:991px) {
+    .menu {
+        padding: 20px;
+        position: relative;
+    }
+
+    /* Mostrar el icono del menú hamburguesa */
+    .menu label {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: -300px; /* Ajusta este valor para subirlo más */
+        right: 20px; /* Lo mantiene alineado a la derecha */
+        z-index: 1100;
+    }
+
+    /* Ajustar la barra de navegación para que sea vertical */
+    .menu .navbar {
+        position: absolute;
+        top: -300%;
+        left: 0;
+        width: 200px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.95);
+        display: flex;
+        flex-direction: column; /* Esto hace que el menú sea vertical */
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+        transform: translateY(-10px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease-in-out;
+        border-radius: 0 0 10px 10px;
+    }
+
+    /* Asegurar que la lista dentro del navbar esté centrada */
+    .menu .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* Animación de desvanecimiento */
+    #menu:checked ~ .navbar {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Pequeño efecto de entrada */
+    @keyframes slideDown {
+        from {
+            transform: translateY(-10px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* Mejor estilo para los enlaces */
+    .menu .navbar ul li a {
+        font-size: 20px;
+        padding: 10px;
+        display: block;
+        width: 100%;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu .navbar ul li a:hover {
+        background-color: #aec670;
+        color: black;
+        border-radius: 5px;
+    }
+    }
+    .header {
+        min-height: 0vh;
+    }
+    
+    .header-content {
+        padding: 80px 30px 50px 30px;
+    }
+    .header-txt {
+        margin-bottom: 15px;
+    }
+    .header-txt h1 {
+        font-size: 90px;
+    }
+    .header-txt p {
+        padding: 0;
+        margin: 15px 0;
+    }
+    .header-dir {
+        flex-direction: column;
+    }
+    .dir p {
+        font-size: 18px;
+    }
+    .welcome {
+        flex-direction: column;
+    }
+    .welcome-1 {
+        display: none;
+    }
+    .welcome-2 {
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+    }
+    h2 {
+        font-size: 70px;
+        line-height: 80px;
+    }
+    p {
+        margin: 15px 0;
+    }
+    .services {
+        padding: 30px;
+    }
+    .services-txt p {
+        padding: 0;
+    }
+    .services-group {
+        flex-direction: column;
+        margin: 0;
+    }
+    .services-1 {
+        margin: 0 0 20px 0;
+    }
+    .prices {
+        flex-direction: column;
+    }
+    .prices-1 {
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+    }
+    table {
+        margin: 25px 0 0 0;
+    }
+    .prices-2 {
+        display: none;
+    }
+    .personal {
+        padding: 30px;
+    }
+    .personal-group {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .persona-1 {
+        margin-bottom: 25px;
+    }
+    .footer-bg {
+        padding: 30px;
+    }
+    textarea {
+        width: 250px !important;
+} 
+
+
+
+
+
